@@ -74,6 +74,7 @@ public class RestUser {
      * PUT method for updating or creating an instance of GenericResource
      * @param content representation for the resource
      */
+    @Seguro
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("update")
@@ -90,7 +91,7 @@ public class RestUser {
         return userDao.update(user);
     }
     
-    
+    @Seguro
     @DELETE
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("delete")
@@ -109,7 +110,7 @@ public class RestUser {
         return userDao.delete(user);
     }
     
-    
+    @Seguro
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("data")

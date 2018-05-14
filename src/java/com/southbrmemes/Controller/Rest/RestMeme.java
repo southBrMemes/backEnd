@@ -49,6 +49,7 @@ public class RestMeme {
      *
      * @return an instance of java.lang.String
      */
+    
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("list")
@@ -58,6 +59,7 @@ public class RestMeme {
         return gson.toJson(memeDao.getMeme());
     }
 
+    @Seguro
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("mylist")
@@ -80,6 +82,7 @@ public class RestMeme {
      *
      * @param content representation for the resource
      */
+    @Seguro
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("insert")
@@ -97,6 +100,7 @@ public class RestMeme {
         return memeDao.insert(meme);
     }
 
+    @Seguro
     @PUT
     @Produces(MediaType.APPLICATION_JSON)
     @Path("update")
@@ -114,6 +118,7 @@ public class RestMeme {
         return memeDao.update(meme);
     }
 
+    @Seguro
     @DELETE
     @Produces(MediaType.APPLICATION_JSON)
     @Path("delete/{id}")
