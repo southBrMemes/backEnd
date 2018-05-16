@@ -40,7 +40,7 @@ public class UserDao extends UserSQL {
             return login(user);
         } catch (SQLException ex) {
             retorno.setAnswer(false);
-            retorno.setAnswerText("Erro ao cadastrar usuario, este login ja esta sendo usado");
+            retorno.setAnswerText("Erro ao cadastrar usuario, este login já está sendo usado");
             return gson.toJson(retorno);
         }
     }
@@ -56,7 +56,7 @@ public class UserDao extends UserSQL {
 
             if(quant > 0){
             retorno.setAnswer(true);
-            retorno.setAnswerText("usuario atualizado com sucesso");
+            retorno.setAnswerText("usuari o atualizado com sucesso");
             } else {
             retorno.setAnswer(false);
             retorno.setAnswerText("senha incorreta");
